@@ -1,0 +1,36 @@
+<div class='container'>
+  <div class='header'>
+    <h1>👥 User Management System</h1>
+    <p>Manage your users with style and efficiency</p>
+  </div>
+
+  <div class='nav'>
+    <a href='/users/create'>➕ Add New User</a>
+  </div>
+
+  {{#if users}}
+    <div class='users-grid'>
+      {{#each users}}
+        <div class='card'>
+          <h3>{{this.name}}</h3>
+          <p><strong>Occupation:</strong> {{this.occupation}}</p>
+          <p><strong>Newsletter:</strong>
+            {{#if this.newsletter}}
+              <span class='badge badge-success'>✓ Yes</span>
+            {{else}}
+              <span class='badge badge-info'>✗ No</span>
+            {{/if}}
+          </p>
+          <div class='card-actions'>
+            <a href='/users/{{this.id}}' class='btn btn-primary'>👁️ View Details</a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <div class='empty-state'>
+      <h3>No users registered yet</h3>
+      <p>Click "Add New User" to get started!</p>
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,30 @@
+<div class='container'>
+  <a href='/' class='back-link'>← Back to Home</a>
+  
+  <div class='header'>
+    <h1>➕ Add New User</h1>
+    <p>Create a new user account</p>
+  </div>
+
+  <form action='/users/create' method='post' class='form'>
+    <div class='form-control'>
+      <label for='name'>👤 Full Name</label>
+      <input type='text' name='name' id='name' placeholder='Enter full name' required />
+    </div>
+    
+    <div class='form-control'>
+      <label for='occupation'>💼 Occupation</label>
+      <input type='text' name='occupation' id='occupation' placeholder='Enter occupation' required />
+    </div>
+    
+    <div class='form-control form-checkbox'>
+      <input type='checkbox' name='newsletter' id='newsletter' />
+      <label for='newsletter'>📩 Subscribe to newsletter</label>
+    </div>
+    
+    <div class='card-actions'>
+      <input type='submit' value='🚀 Create User' />
+      <a href='/' class='btn btn-secondary'>❌ Cancel</a>
+    </div>
+  </form>
+</div>
